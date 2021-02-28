@@ -38,6 +38,7 @@ function to_address_components($address) {
     'key' => 'YOUR_KEY',
   );
   $response = json_decode(api_get('https://api.opencagedata.com/geocode/v1/json', $param));
+  // print_r($response);
   $results = $response->results;
   if (count($results) > 0) {
     // print_pre($response->results[0]);
